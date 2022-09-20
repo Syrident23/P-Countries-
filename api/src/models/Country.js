@@ -31,7 +31,7 @@ module.exports = (sequelize) => {
     },
     capital: {
       type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
+      allowNull: true,
     },
     continent: {
       type: DataTypes.STRING,

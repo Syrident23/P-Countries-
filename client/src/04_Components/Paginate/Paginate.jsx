@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function Paginado({countriesPerPage, countries, paginado}){
+export default function Paginado({countriesPerPage, countries, paginate}){
     const pageNumbrers = []
     for (let i = 1; i <= Math.ceil(countries/countriesPerPage); i++) {
         pageNumbrers.push(i)   
@@ -12,7 +12,12 @@ export default function Paginado({countriesPerPage, countries, paginado}){
                 {pageNumbrers && 
                 pageNumbrers.map(number =>(
                     <li key={number}>
-                        <a className ='numeroPaginado' href onClick={()=>paginado(number)}> {number} </a>  
+                        <a 
+                        className ='numeroPaginado' 
+                        
+                        onClick={()=>paginate(number)}> 
+                        {number} 
+                        </a>  
                     </li> 
                 ))}
             </ul>
