@@ -1,0 +1,26 @@
+.paginateContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.ul{
+    display: flex;
+    width: 70vh;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.paginateNumber{
+    display:flex;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(227, 240, 206);
+    border-radius: 25%;
+    background-color: rgb(227, 240, 206);
+    box-shadow: 0.2px 0px 2px 3px rgb(86, 114, 60);
+}

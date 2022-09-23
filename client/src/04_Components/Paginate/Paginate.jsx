@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Paginate.css'
 
 export default function Paginado({countriesPerPage, countries, paginate}){
     const pageNumbrers = []
@@ -7,13 +7,13 @@ export default function Paginado({countriesPerPage, countries, paginate}){
         pageNumbrers.push(i)   
     }
     return(
-        <nav className='paginadoContainer'>
+        <nav className='paginateContainer'>
             <ul className ='ul'>
                 {pageNumbrers && 
                 pageNumbrers.map(number =>(
                     <li key={number}>
                         <a 
-                        className ='numeroPaginado' 
+                        className ='paginateNumber' 
                         
                         onClick={()=>paginate(number)}> 
                         {number} 

@@ -1,0 +1,60 @@
+.navBar{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 30px;
+    flex-direction: column;
+    background-color: #e3f0ce;
+    margin-bottom: 10px;
+}
+
+.tittle{
+    text-shadow: 2px 3px 9px rgba(0,0,0,0.62);
+    align-self: center;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    align-self: center;
+    width: 60%;
+    margin-left: 65px;
+}
+
+.op:hover{
+    background-color: #60eafc;
+}
+
+.home{
+    padding: 5px;
+    text-decoration: none;
+    color:black;
+    border: 2px solid #00B4CC;
+    border-radius: 10px;
+    background-color: #00B4CC;
+}
+
+.activity{
+    padding: 5px;
+    text-decoration: none;
+    color:black;
+    border: 2px solid #00B4CC;
+    border-radius: 10px;
+    background-color: #00B4CC;
+}
+
+.activities{
+    padding: 5px;
+    text-decoration: none;
+    color:black;
+    border: 2px solid #00B4CC;
+    border-radius: 10px;
+    background-color: #00B4CC;
+}
+
+.searchBar{
+    margin: 15px;
+    position: relative;
+    
+}

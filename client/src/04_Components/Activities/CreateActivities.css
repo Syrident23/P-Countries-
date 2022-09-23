@@ -1,0 +1,89 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.title{
+    border: 3px solid #00B4CC;
+    padding: 10px;
+    background-color: #e3f0ce;
+}
+
+
+.formContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #00B4CC;
+    width: fit-content;
+    padding: 55px;
+    background-color: #e3f0ce;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.formDiv{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nameInput{
+    border: 3px solid #00B4CC;
+
+}
+
+.nameInput::placeholder{
+    text-align: center;
+}
+
+
+.durationInput{
+    border: 3px solid #00B4CC;
+}
+
+.durationInput::placeholder{
+    text-align: center;
+}
+
+.textArea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #00B4CC;
+    margin-top: 5px;
+    height: 200px;
+    background-color: white;
+}
+
+.countrieAndButton{
+    border: 1px solid #00B4CC;
+    height: fit-content;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 3px;
+    height: fit-content;
+    width: fit-content;
+}
+
+
+.btnDelete{
+    height: 15px;
+    font-size: 10px;
+    width: 15px;
+    text-align: center;
+    background-color: red;
+    border: 1px solid rgb(148, 2, 2);
+    
+}
+
+
+.seasonSelect::placeholder{
+    text-align: center;
+}

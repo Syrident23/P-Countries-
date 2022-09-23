@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Activity.css'
 
 export default function Activity({name, dificulty, season, duration, countryId}) {
     return(

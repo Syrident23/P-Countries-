@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import Card from "../Cards/Card";
 import { useState } from "react";
 import Paginate from '../Paginate/Paginate'
-
+import './Home.css'
 
 export default function Home(){
 
@@ -71,7 +71,7 @@ useEffect(()=>{
                 <NavBar/>
             </div>
             <div className='filters'>
-                <button onClick={e=> {reloadButton(e)}}>
+                <button className='reload' onClick={e=> {reloadButton(e)}}>
                     Reload
                 </button>
                 <select className="orderByName" onChange={(e) => handleOrderByName(e)}>
@@ -115,8 +115,8 @@ useEffect(()=>{
             <div className="cards">
                 {currentCountry.map(c =>{
                     return(
-                        <div key = {c.id}>
-                            <Link to={'/home/' + c.id}>
+                        <div className='card' key = {c.id}>
+                            <Link className='cardLink' to={'/home/' + c.id}>
                                 <Card 
                                     name = {c.name} 
                                     flag = {c.flag}

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { getActivities, postActivity } from "../../03_Actions/actionsIndex";
 import NavBar from '../NavBar/NavBar'
+import './CreateActivities.css'
 
 
 function validate(input){
@@ -92,12 +93,14 @@ export default function CreateActivities(){
             <div>
                 <NavBar/>
             </div>
-            <h2>Create Activity</h2>
-            <div>
-                <form onSubmit={handleSubmit}>
-                    <div>
+            <div className="container">
+            <h2 className="title">Create Activity</h2>
+            <div className="formContainer">
+                <form className="form" onSubmit={handleSubmit}>
+                    <div className="formDiv" >
                         <label>Name:</label>
-                        <input 
+                        <input
+                        className="nameInput"
                         placeholder="Enter a Name"
                         type="text" 
                         name = 'name'
@@ -106,11 +109,12 @@ export default function CreateActivities(){
                         />
                         
                     </div>
-                    <div>
+                    <div className="formDiv">
                         <label>Duration:</label>
                         <input
+                        
                         placeholder="Enter a Duration"
-                        className="inp"
+                        className="durationInput"
                         type='text'
                         value= {input.duration}
                         name ='duration'
@@ -118,11 +122,11 @@ export default function CreateActivities(){
                         onChange={(e)=>handleChange(e)}
                         />
                     </div>
-                    <div>
+                    <div className="formDiv">
                         <label>Dificulty:</label>
                         <input 
-                        
-                        className="inp"
+                        defaultValue= '1'
+                        className="difRange"
                         type= 'range'
                         placeholder="1"
                         value={input.dificulty}
@@ -132,11 +136,11 @@ export default function CreateActivities(){
                         onChange={(e)=>handleChange(e)}
                         />
                         
-                    </div>
-                    <div>
+                    </div >
+                    <div className="formDiv">
                         <select 
                         placeholder="Select Season"
-                        className="s"
+                        className="seasonSelect"
                         name="season"
                         value={input.season}
                         onChange = {(e) => handleChange(e)}
@@ -151,7 +155,7 @@ export default function CreateActivities(){
                         
                     </div>
                     
-                    <div>
+                    <div className="formDiv">
                         <select onChange={(e) => handleSelect(e)}>
                             <option>Countries</option>
                         {countries.map((c) => (
@@ -162,7 +166,7 @@ export default function CreateActivities(){
                     <div className="textArea">
                         {input.countryId.map((country) => (
                             
-                            <div className='countrieAndButton'>
+                            <div className='countrieAndButton '>
                                 <input className='btnDelete' type='button' value='X' onClick={() => handleDelete(country)}/>
                                 <p className='pOfCountry'>{country}</p>
                             </div>
@@ -172,6 +176,7 @@ export default function CreateActivities(){
                     <button className='btnActivity' type="submit">Crear Actividad</button>
                 </div>
                 </form>
+            </div>
             </div>
         </div>
     )

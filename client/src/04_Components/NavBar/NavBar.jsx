@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import Search from "../SearchBar/SearchBar";
+import './NavBar.css'
 
 export default function NavBar(){
 return(
-    <div>
-        <h2>Countries</h2>
+    <div className="navBar">
+        <h2 className="tittle">COUNTRIES</h2>
         <div className="navigation">
         
-            <Link to={'/home'}>Home</Link>
-            <Link to={'/activity'}>Create Activity</Link>
-            <Link to={'/activities'}>List of Activities</Link>
+            <Link className="home" to={'/home'}>Home</Link>
+            <Link className="activity" to={'/activity'}>Create Activity</Link>
+            <Link className="activities" to={'/activities'}>List of Activities</Link>
         
         </div>
         <div className="searchBar">
